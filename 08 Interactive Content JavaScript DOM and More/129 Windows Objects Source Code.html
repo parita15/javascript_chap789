@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>129 Windows Objects Source Code</title>
+</head>
+<body>
+<div class="asset-container">
+    <div class="asset-container__padding article-view">
+        <div class="w3c-default">
+            <pre class="prettyprint linenums">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Complete JavaScript Course&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;div id="wrapper"&gt; &lt;/div&gt;
+    &lt;script&gt;
+        var output = document.getElementById('wrapper');
+        console.dir(window);
+        for (var prop in window) {
+            document.write(prop + " " + window[prop] + "&lt;br&gt;");
+        }
+        output.innerHTML += window.innerHeight + " " + window.innerWidth;
+        output.innerHTML += window.location;
+        // alert('hello');
+        var w = window.open('index2.html');
+        w.onbeforeunload = function () {
+            alert("don't go anywhere");
+        }
+    &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;</pre><pre class="prettyprint linenums">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Complete JavaScript Course&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;div id="wrapper"&gt;&lt;/div&gt; &lt;a href="index3.html"&gt;Index3&lt;/a&gt; &lt;a href="index.html"&gt;Index&lt;/a&gt; &lt;a href="index2.html"&gt;Index2&lt;/a&gt;
+    &lt;input type="button" onclick="goBack()" value="Back"&gt;
+    &lt;script&gt;
+        var output = document.getElementById('wrapper');
+
+        function goBack() {
+            window.history.go(-1);
+        }
+    &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;</pre><pre class="prettyprint linenums">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Complete JavaScript Course&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;div id="wrapper"&gt;Page 1&lt;/div&gt; &lt;a href="index3.html"&gt;Index3&lt;/a&gt; &lt;a href="index.html"&gt;Index&lt;/a&gt; &lt;a href="index2.html"&gt;Index2&lt;/a&gt;
+    &lt;input type="button" onclick="alert('hello world\'s:')" value="Alert"&gt;
+    &lt;script&gt;
+        var output = document.getElementById('wrapper');
+
+        function goBack() {
+            window.history.go(-1);
+        }
+    &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;</pre><p><br></p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

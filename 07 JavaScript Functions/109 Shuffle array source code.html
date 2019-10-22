@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>109 Shuffle array source code</title>
+</head>
+<body>
+<div class="asset-container">
+    <div class="asset-container__padding article-view">
+        <div class="w3c-default">
+            <p>&lt;!DOCTYPE html&gt;<br>&lt;html&gt;</p>
+
+<p>&lt;head&gt;<br>    &lt;title&gt;Complete JavaScript Course&lt;/title&gt;<br>&lt;/head&gt;</p>
+
+<p>&lt;body&gt;<br>    &lt;div id="output"&gt;&lt;/div&gt;<br>    &lt;input type="button" onClick="start()" value="Start Game"&gt;<br>    &lt;script&gt;<br>        var secretWord = ["JavaScript", "html", "css", "website", "a", 2, 4, 5, 6, 3, 4, 4, 5, 66565, 1231];<br>        var output = document.getElementById("output");</p>
+
+<p>        function start() {<br>            shuffleArray(secretWord);<br>            output.innerHTML += secretWord + "&lt;br&gt;";<br>        }</p>
+
+<p>        function shuffleArray(arr) {<br>            for (var x = arr.length - 1; x &gt; 0; x--) {<br>                var holder = Math.floor(Math.random() * (x + 1));<br>                var temp = arr[x];<br>                arr[x] = arr[holder];<br>                arr[holder] = temp;<br>            }<br>            return arr;<br>        }<br>    &lt;/script&gt;<br>&lt;/body&gt;</p>
+
+<p>&lt;/html&gt;</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

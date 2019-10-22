@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>116 Shopping List Source Code</title>
+</head>
+<body>
+<div class="asset-container">
+    <div class="asset-container__padding article-view">
+        <div class="w3c-default">
+            <p>Part 1</p><pre class="prettyprint linenums">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Complete JavaScript Course&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;input type="text" id="item"&gt;
+    &lt;br&gt;
+    &lt;input type="button" onClick="addItem()" value="Add Item"&gt;
+    &lt;br&gt;
+    &lt;div id="output"&gt;&lt;/div&gt;
+    
+    &lt;script&gt;
+        var output = document.getElementById("output");
+
+    &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;</pre><p>Solution</p><pre class="prettyprint linenums">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Complete JavaScript Course&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;input type="text" id="item"&gt;
+    &lt;br&gt;
+    &lt;input type="button" onClick="addItem()" value="Add Item"&gt;
+    &lt;br&gt;
+    &lt;div id="output"&gt;&lt;/div&gt;
+    &lt;script&gt;
+        var shoppingList = [];
+
+        function addItem() {
+            var addItem = document.getElementById("item").value;
+            shoppingList.push(addItem);
+            function outputList() {
+                var html = "";
+                var output = document.getElementById("output");
+                for (var x = 0; x &lt; shoppingList.length; x++) {
+                    html += (x + 1) + ". " + shoppingList[x] + "&lt;br&gt;";
+                }
+                output.innerHTML = html;
+            }
+            outputList();
+        }
+    &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;</pre><p><br></p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

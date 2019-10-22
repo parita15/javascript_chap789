@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>158 Source Drag and Drop Elements</title>
+</head>
+<body>
+<div class="asset-container">
+    <div class="asset-container__padding article-view">
+        <div class="w3c-default">
+            <p>&lt;!DOCTYPE html&gt;<br>&lt;html&gt;</p>
+
+<p>&lt;head&gt;<br>    &lt;title&gt;Complete JavaScript Course&lt;/title&gt;<br>    &lt;style&gt;<br>        .box {<br>            height: 200px;<br>            width: 200px;<br>            padding: 20px;<br>            margin: 0 50px;<br>            display: inline-block;<br>            border: 1px solid black;<br>        }<br>        <br>        #getEle {<br>            background-color: red;<br>        }<br>    &lt;/style&gt;<br>&lt;/head&gt;</p>
+
+<p>&lt;body&gt;<br>    &lt;div id="wrapper"&gt;Complete JavaScript Course&lt;/div&gt;<br>    &lt;div class="box" ondrop="dDrop()" ondragover="nDrop()"&gt;1<br>        &lt;div id="getEle" ondragstart="dStart()" draggable="true"&gt;Drag Me Please!&lt;/div&gt;<br>    &lt;/div&gt;<br>    &lt;div class="box" ondrop="dDrop()" ondragover="nDrop()"&gt;2&lt;/div&gt;<br>    &lt;div class="box" ondrop="dDrop()" ondragover="nDrop()"&gt;3&lt;/div&gt;<br>    &lt;div class="box" ondrop="dDrop()" ondragover="nDrop()"&gt;4&lt;/div&gt;<br>    &lt;script&gt;<br>        var holderItem;</p>
+
+<p>        function dStart() {<br>            message("drag started");<br>            holderItem = event.target;<br>        }</p>
+
+<p>        function nDrop() {<br>            event.preventDefault();<br>        }</p>
+
+<p>        function dDrop() {<br>            event.preventDefault();<br>            message("Drop It");<br>            if (event.target.className == "box") {<br>                event.target.appendChild(holderItem);<br>            }<br>        }</p>
+
+<p>        function message(m) {<br>            document.getElementById('wrapper').innerHTML = m;<br>        }<br>    &lt;/script&gt;<br>&lt;/body&gt;</p>
+
+<p>&lt;/html&gt;</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

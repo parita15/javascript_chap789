@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>152 Source Build an Image Carousel</title>
+</head>
+<body>
+<div class="asset-container">
+    <div class="asset-container__padding article-view">
+        <div class="w3c-default">
+            <p>&lt;!DOCTYPE html&gt;<br>&lt;html&gt;</p>
+
+<p>&lt;head&gt;<br>    &lt;title&gt;Complete JavaScript Course&lt;/title&gt;<br>&lt;/head&gt;</p>
+
+<p>&lt;body onload="startImg()"&gt;<br>    &lt;div id="wrapper"&gt;Complete JavaScript Course&lt;/div&gt; &lt;img id="myImage"&gt;<br>    &lt;script&gt;<br>        var imagePlace = 0;<br>        var images = ["1", "2", "3", "4", "5", "6", "7"];<br>        var imagesC = ["111", "222", "FF0000", "00FF00", "0000FF", "000", "333"];</p>
+
+<p>        function startImg() {<br>            myImage.src = "http://via.placeholder.com/350x150/" + imagesC[imagePlace] + "/fff?text=Image" + images[imagePlace];<br>            setInterval(swapImage, 3000);<br>        }</p>
+
+<p>        function swapImage() {<br>            imagePlace++;<br>            if (imagePlace &gt;= images.length) {<br>                imagePlace = 0;<br>            }<br>            var myImage = document.getElementById('myImage');<br>            myImage.src = "http://via.placeholder.com/350x150/" + imagesC[imagePlace] + "/fff?text=Image" + images[imagePlace];<br>        }<br>    &lt;/script&gt;<br>&lt;/body&gt;</p>
+
+<p>&lt;/html&gt;</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

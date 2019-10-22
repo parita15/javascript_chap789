@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>154 Source Key Event Return Boolean</title>
+</head>
+<body>
+<div class="asset-container">
+    <div class="asset-container__padding article-view">
+        <div class="w3c-default">
+            <p>&lt;!DOCTYPE html&gt;<br>&lt;html&gt;</p>
+
+<p>&lt;head&gt;<br>    &lt;title&gt;Complete JavaScript Course&lt;/title&gt;<br>&lt;/head&gt;</p>
+
+<p>&lt;body&gt;<br>    &lt;div id="wrapper"&gt;Complete JavaScript Course&lt;/div&gt;<br>    &lt;input type="text" name="myNum1" onkeypress="return numCheck()" onpaste="return false"&gt;<br>    &lt;input type="text" name="myNum2" onkeypress="return numCheck2()" onpaste="return false"&gt;<br>    &lt;script&gt;<br>        function numCheck() {<br>            message(!isNaN(event.key));<br>            return !isNaN(event.key);<br>        }</p>
+
+<p>        function numCheck2() {<br>            message(isNaN(event.key));<br>            return isNaN(event.key);<br>        }</p>
+
+<p>        function message(m) {<br>            document.getElementById('wrapper').innerHTML = m;<br>        }<br>    &lt;/script&gt;<br>&lt;/body&gt;</p>
+
+<p>&lt;/html&gt;</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

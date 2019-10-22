@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>010 JavaScript Dynamic Web with the DOM</title>
+    </head>
+    <body>
+
+        <div style="background-color:#ffffaa" align = "center">
+            <script>
+                var c = '';
+                var opt = '';
+                var n = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
+
+                var quiz = {"count": 3, "next": null, "previous": null, "results": [{"_class": "assessment", "id": 1661358, "assessment_type": "multiple-choice", "created": "2017-09-19T20:23:16Z", "prompt": {"relatedLectureIds": "", "feedbacks": ["", "", ""], "question": "<p>Where can you find window.innerHeight window.innerWidth</p>", "answers": ["<p>Document object Model</p>", "<p>Window Object Model</p>", "<p>Windows Object Method</p>"]}, "correct_response": ["b"], "updated": "2017-09-19T20:23:16Z", "section": "", "question_plain": "Where can you find window.innerHeight window.innerWidth", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 1671090, "assessment_type": "multiple-choice", "created": "2017-09-22T18:26:07Z", "prompt": {"feedbacks": ["", "", ""], "relatedLectureIds": ["8031160"], "question": "<p>What does the following code do</p>\n\n<pre class=\"prettyprint linenums\">    &lt;input type=\"text\" name=\"myNum1\" onkeypress=\"return numCheck()\" onpaste=\"return false\"&gt;\n    &lt;script&gt;\n        function numCheck() {\n            return !isNaN(event.key);\n        }\n    &lt;/script&gt;</pre>\n\n<p><br></p>", "answers": ["<p>only allows number into the input field</p>", "<p>only allow characters into the input field</p>", "<p>Nothing it does not work</p>"]}, "correct_response": ["a"], "updated": "2017-09-22T18:26:07Z", "section": "", "question_plain": "What does the following code do\n\n    &lt;input type=\"text\" name=\"myNum1\" onkeypress=\"return numCheck()\" onpaste=\"return false\"&gt;\n    &lt;script&gt;\n        function numCheck() {\n            return !isNaN(event.key);\n        }\n    &lt;/script&gt;", "related_lectures": [{"_class": "lecture", "id": 8031160, "title": "Key Event Return Boolean", "created": "2017-09-19T19:31:22Z", "asset": {"_class": "asset", "id": 9640744, "asset_type": "Video", "title": "8 - 16 Key Event Return Boolean.mp4", "created": "2017-09-19T19:24:18Z"}, "object_index": 153, "url": "/javascript-training/learn/v4/t/lecture/8031160"}], "original_assessment_id": 0}, {"_class": "assessment", "id": 1671102, "assessment_type": "multiple-choice", "created": "2017-09-22T18:29:55Z", "prompt": {"feedbacks": ["", "", ""], "question": "<p>What will happen when I press submit after entering some numbers into the input field</p>\n\n<pre class=\"prettyprint linenums\">    &lt;form action=\"index2.html\" method=\"get\" onsubmit=\"return valForm()\"&gt; First:\n        &lt;input type=\"text\" id=\"firstName\"&gt;\n        &lt;input type=\"submit\" value=\"submit\"&gt; &lt;/form&gt;\n    &lt;script&gt;\n        function valForm() {\n            var p = event.target.children;\n            if (p.firstName.value == \"\") {\n                return false;\n            }\n            return true;\n        }\n    &lt;/script&gt;</pre>\n\n<p><br></p>", "relatedLectureIds": ["8031166"], "answers": ["<p>nothing</p>", "<p>it submits the form</p>", "<p>it stops it from submitting because you need only characters no numbers</p>"]}, "correct_response": ["b"], "updated": "2017-09-22T18:29:55Z", "section": "", "question_plain": "What will happen when I press submit after entering some numbers into the input field\n\n    &lt;form action=\"index2.html\" method=\"get\" onsubmit=\"return valForm()\"&gt; First:\n        &lt;input type=\"text\" id=\"firstName\"&gt;\n        &lt;input type=\"submit\" value=\"submit\"&gt; &lt;/form&gt;\n    &lt;script&gt;\n        function valForm() {\n            var p = event.target.children;\n            if (p.firstName.value == \"\") {\n                return false;\n            }\n            return true;\n        }\n    &lt;/script&gt;", "related_lectures": [{"_class": "lecture", "id": 8031166, "title": "Onsubmit Form Validation", "created": "2017-09-19T19:31:28Z", "asset": {"_class": "asset", "id": 9640732, "asset_type": "Video", "title": "8 - 17 Onsubmit Form Validation.mp4", "created": "2017-09-19T19:24:18Z"}, "object_index": 155, "url": "/javascript-training/learn/v4/t/lecture/8031166"}], "original_assessment_id": 0}]};
+
+                for (var i = 0; i < quiz.results.length; i++) {
+
+                    var question = '<font color="ff0000"><br><h3>Question-' + i + ': </h3> <b>' + quiz.results[i].prompt.question + '</b> <br>';
+
+                    for (var j = 0; j < quiz.results[i].prompt.answers.length; j++) {
+
+                        opt = opt.concat(quiz.results[i].prompt.answers[j] ? '<p style="cursor: pointer" onclick="this.style=\'font-weight: bold; color: #CE534D\'">' + n[j] + ': ' + quiz.results[i].prompt.answers[j].toString().replace(/,/g, '<br>') + '</p>' : '<br>');
+                    }
+                    var ans = quiz.results[i].correct_response ? '<p> <br> <input style="cursor: pointer" type="button" onclick="this.value=\'Answer is: ' + quiz.results[i].correct_response.toString() + '\'" value="Show Answer"></input> </p>' : '<br>';
+                    c = c.concat(question, opt, ans);
+                    opt = ''
+                    }
+                document.write(c);
+            </script>
+        </div>
+    </body>
+    </html>

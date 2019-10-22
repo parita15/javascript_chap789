@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>124 Source Code Exercise Tweak</title>
+</head>
+<body>
+<div class="asset-container">
+    <div class="asset-container__padding article-view">
+        <div class="w3c-default">
+            <p>&lt;!DOCTYPE html&gt;<br>&lt;html&gt;</p>
+
+<p>&lt;head&gt;<br>    &lt;title&gt;Complete JavaScript Course&lt;/title&gt;<br>&lt;/head&gt;</p>
+
+<p>&lt;body&gt;<br>    &lt;div id="wrapper"&gt;<br>        &lt;div id="start"&gt;&lt;/div&gt; How many Players ?<br>        &lt;input type="number" id="players" min="1" max="5" value="3"&gt;<br>        &lt;button id="btnDeal" type="button" onClick="startDeal()"&gt;Deal&lt;/button&gt;<br>        &lt;div id="output"&gt;&lt;/div&gt;<br>    &lt;/div&gt;<br>    &lt;script&gt;<br>        var suits = ["spades", "hearts", "clubs", "diams"];<br>        var cardFace = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"];<br>        var players = [];</p>
+
+<p>        function startDeal() {<br>            players = [];<br>            var num = Number(document.getElementById("players").value);<br>            for (var i = 0; i &lt; num; i++) {<br>                players[i] = [];<br>            }<br>            var cards = buildCards();<br>            shuffleCards(cards);<br>            deal(cards);<br>        }</p>
+
+<p>        function buildCards() {<br>            var cards = [];<br>            for (s in suits) {<br>                var bgColor = (suits[s] == "hearts" || suits[s] == "diams") ? "red" : "black";<br>                for (c in cardFace) {<br>                    var card = {<br>                        suit: suits[s]<br>                        , num: cardFace[c]<br>                        , bgColor: bgColor<br>                        , v: (Number(c) + 2)<br>                    }<br>                    cards.push(card);<br>                }<br>            }<br>            return cards;<br>        }</p>
+
+<p>        function shuffleCards(array) {<br>            for (var x = array.length - 1; x &gt; 0; x--) {<br>                var ii = Math.floor(Math.random() * (x + 1));<br>                var temp = array[x];<br>                array[x] = array[ii];<br>                array[ii] = temp;<br>            }<br>            return array;<br>        }</p>
+
+<p>        function deal(cards) {<br>            var num = players.length;<br>            var output = document.getElementById("output");<br>            var p = 0;<br>            for (var i = 0; i &lt; cards.length; i++) {<br>                players[p].push(cards[i]);<br>                p++;<br>                if (p &gt;= num) {<br>                    p = 0;<br>                }<br>            }<br>            for (var i = 0; i &lt; num; i++) {<br>                output.innerHTML += "&lt;br&gt;Players : " + (i + 1) + "&lt;br&gt;";<br>                for (var x = 0; x &lt; players[i].length; x++) {<br>                    var p = players[i][x];<br>                    output.innerHTML += "&lt;span style=\"color:" + p.bgColor + "\"&gt;" + p.num + "&amp;" + p.suit + ";&lt;/span&gt;";<br>                }<br>                output.innerHTML += "&lt;br&gt;";<br>            }<br>        }<br>    &lt;/script&gt;<br>&lt;/body&gt;</p>
+
+<p>&lt;/html&gt;</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

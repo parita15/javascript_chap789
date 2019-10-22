@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>156 Source Onsubmit Form Validation</title>
+</head>
+<body>
+<div class="asset-container">
+    <div class="asset-container__padding article-view">
+        <div class="w3c-default">
+            <p>&lt;!DOCTYPE html&gt;<br>&lt;html&gt;</p>
+
+<p>&lt;head&gt;<br>    &lt;title&gt;Complete JavaScript Course&lt;/title&gt;<br>&lt;/head&gt;</p>
+
+<p>&lt;body&gt;<br>    &lt;div id="wrapper"&gt;Complete JavaScript Course&lt;/div&gt;<br>    &lt;form action="index2.html" method="get" onsubmit="return valForm()"&gt; First:<br>        &lt;input type="text" id="firstName"&gt;<br>        &lt;br&gt; Last:<br>        &lt;input type="text" id="lastName"&gt;<br>        &lt;br&gt; Age:<br>        &lt;input type="text" id="age"&gt;<br>        &lt;br&gt;<br>        &lt;input type="submit" value="submit"&gt; &lt;/form&gt;<br>    &lt;script&gt;<br>        function valForm() {<br>            var p = event.target.children;<br>            if (p.firstName.value == "") {<br>                message("Needs a first Name!!");<br>                return false;<br>            }<br>            if (p.lastName.value == "") {<br>                message("Needs a last Name!!");<br>                return false;<br>            }<br>            if (p.age.value == "") {<br>                message("Needs an Age!!");<br>                return false;<br>            }<br>            console.log(p.firstName);<br>            return true;<br>        }</p>
+
+<p>        function message(m) {<br>            document.getElementById('wrapper').innerHTML = m;<br>        }<br>    &lt;/script&gt;<br>&lt;/body&gt;</p>
+
+<p>&lt;/html&gt;</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

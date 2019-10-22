@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>150 Source Placeholder Image Generator</title>
+</head>
+<body>
+<div class="asset-container">
+    <div class="asset-container__padding article-view">
+        <div class="w3c-default">
+            <p>&lt;div id="wrapper"&gt;Page 1&lt;/div&gt; &lt;img id="imgSwap" onmouseover="cImg(this)" onmouseout="bImg(this)"&gt;<br>&lt;script&gt;<br>  var imgHolder = "http://via.placeholder.com/350x150/ffff00/fff?text=Image10";<br>  document.getElementById('imgSwap').onclick = function() {<br>    message("clicked");<br>  }<br>  window.onload = function() {<br>    document.getElementById('imgSwap').src = imgHolder;<br>  }</p>
+
+<p>  function cImg(t) {<br>    message(t.src);<br>    imgHolder = t.src;<br>    t.src = "http://via.placeholder.com/350x150/ff0000/fff?text=Image2";<br>  }</p>
+
+<p>  function bImg(t) {<br>    t.src = imgHolder;<br>  }</p>
+
+<p>  function message(m) {<br>    document.getElementById('wrapper').innerHTML = m;<br>  }<br>&lt;/script&gt;</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

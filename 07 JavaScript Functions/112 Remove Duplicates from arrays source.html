@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>112 Remove Duplicates from arrays source</title>
+</head>
+<body>
+<div class="asset-container">
+    <div class="asset-container__padding article-view">
+        <div class="w3c-default">
+            <p>&lt;!DOCTYPE html&gt;<br>&lt;html&gt;</p>
+
+<p>&lt;head&gt;<br>    &lt;title&gt;Complete JavaScript Course&lt;/title&gt;<br>&lt;/head&gt;</p>
+
+<p>&lt;body&gt;<br>    &lt;div id="output"&gt;&lt;/div&gt;<br>    &lt;script&gt;<br>        var output = document.getElementById("output");<br>        var myArray = ["hello", "world", 23423, "JavaScript", "hello", "world", 23423, 44334, 22, "JavaScript", ];<br>        var myArrayClean = removeDup(myArray);<br>        output.innerHTML = myArray + '&lt;br&gt;' + myArrayClean;</p>
+
+<p>        function removeDup(arr) {<br>            var cArray = [];<br>            var cObject = {};<br>            var z = '';<br>            for (var x = 0; x &lt; arr.length; x++) {<br>                //console.log(arr[x]);<br>                cObject[arr[x]] = "whatever";<br>            }<br>            console.log(cObject);<br>            for (z in cObject) {<br>                //console.log(z);<br>                cArray.push(z);<br>            }<br>            return cArray;<br>        }<br>    &lt;/script&gt;<br>&lt;/body&gt;</p>
+
+<p>&lt;/html&gt;</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

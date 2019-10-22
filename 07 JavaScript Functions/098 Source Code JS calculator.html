@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>098 Source Code JS calculator</title>
+</head>
+<body>
+<div class="asset-container">
+    <div class="asset-container__padding article-view">
+        <div class="w3c-default">
+            <pre class="prettyprint linenums">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Complete JavaScript Course&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt; First :
+    &lt;input type="text" id="num1"&gt; Second :
+    &lt;input type="text" id="num2"&gt;
+    &lt;br&gt;
+    &lt;input type="button" onClick="addBy()" value="Add"&gt;
+    &lt;input type="button" onClick="subBy()" value="Subtract"&gt;
+    &lt;input type="button" onClick="mulBy()" value="Multiply"&gt;
+    &lt;input type="button" onClick="divBy()" value="Divide"&gt;
+    &lt;br&gt;
+    &lt;div id="output"&gt;&lt;/div&gt;
+    &lt;script&gt;
+        var output = document.getElementById("output");
+        var num1 = document.getElementById("num1");
+        var num2 = document.getElementById("num2");
+        function addBy() {
+            var a = num1.value + " + " + num2.value;
+            var b = Number(num1.value) + Number(num2.value);
+            outHTML(a, b);
+        }
+        function subBy() {
+            var a = num1.value + " - " + num2.value;
+            var b = Number(num1.value) - Number(num2.value);
+            outHTML(a, b);
+        }
+        function mulBy() {
+            var a = num1.value + " X " + num2.value;
+            var b = Number(num1.value) * Number(num2.value);
+            outHTML(a, b);
+        }
+        function divBy() {
+            var a = num1.value + " / " + num2.value;
+            var b = Number(num1.value) / Number(num2.value);
+            outHTML(a, b);
+        }
+        function outHTML(a, b) {
+            output.innerHTML += a + " = " + b + "&lt;br&gt;";
+        }
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

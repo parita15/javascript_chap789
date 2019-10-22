@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>131 Source Window SetTimeOut Method</title>
+</head>
+<body>
+<div class="asset-container">
+    <div class="asset-container__padding article-view">
+        <div class="w3c-default">
+            <p>&lt;!DOCTYPE html&gt;<br>&lt;html&gt;</p>
+
+<p>&lt;head&gt;<br>    &lt;title&gt;Complete JavaScript Course&lt;/title&gt;<br>&lt;/head&gt;</p>
+
+<p>&lt;body&gt;<br>    &lt;div id="wrapper"&gt;Page 1&lt;/div&gt; &lt;a href="index3.html"&gt;Index3&lt;/a&gt; &lt;a href="index.html"&gt;Index&lt;/a&gt; &lt;a href="index2.html"&gt;Index2&lt;/a&gt;<br>    &lt;input type="button" onclick="startInt()" value="start"&gt;<br>    &lt;input type="button" onclick="clearInt()" value="stop"&gt;<br>    &lt;script&gt;<br>        var output = document.getElementById('wrapper');<br>        window.setTimeout(updateWrapper, 5000);<br>        var myTimer;</p>
+
+<p>        function startInt() {<br>            myPopup();<br>            myTimer = window.setTimeout(startInt, 1000);<br>        }</p>
+
+<p>        function updateWrapper() {<br>            document.getElementById('wrapper').innerHTML = "welcome to my website :)";<br>        }</p>
+
+<p>        function clearInt() {<br>            window.clearInterval(myTimer);<br>        }</p>
+
+<p>        function myPopup() {<br>            alert("Hello");<br>        }<br>    &lt;/script&gt;<br>&lt;/body&gt;</p>
+
+<p>&lt;/html&gt;</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
